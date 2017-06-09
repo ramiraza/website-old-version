@@ -1,0 +1,45 @@
+// **************************
+// ***** Navigation Bar *****
+// **************************
+
+.navbar
+  margin-bottom: 0px
+
+.navbar-default
+  background: #fff
+  border-radius: 0px
+  border-top: none
+  border-right: none
+  border-left: none
+
+  .navbar-header, .navbar-nav
+    margin: 10px 0
+
+  .navbar-header .navbar-toggle
+    border: none
+    &:hover, &:focus
+      background: none
+    .icon-bar
+      background-color: #384E64
+
+  .navbar-header .img_wrap
+    +size(50px)
+    float: left
+    border: none
+
+  .navbar-brand
+    padding: 0
+    margin: 0
+    padding-left: 30px
+    h1
+      font-size: 1.2em
+      padding-top: 6px
+    h2
+      font-size: .675em
+
+  .navbar-nav
+    li.active > a
+      background: none
+      font-weight: bold
+      &:hover
+        background: none

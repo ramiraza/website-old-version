@@ -1,0 +1,84 @@
+<!-- navigation bar to display on all pages except home page -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href={{ "/index.html" | prepend: url }}>
+        <div class="img_wrap">
+          <img src={{"/assets/img/photo.jpg" | prepend: url }} alt="">
+        </div>
+      </a>
+      <a href={{ "/index.html" | prepend: url }} class="navbar-brand">
+        <h1>{{site.main_heading}}</h1>
+        <h2>{{site.kicker}}</h2>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+          {% for item in navigation_pages %}
+            {% if item.navigation_weight %}
+            <li {% if item.url ==  page.url %} class="active" {% endif %}><a href="{{ item.url }}">{{ item.nav_name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Download <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <!-- <li><a href="#">Starter Kit</a></li>
+            <li><a href="#">Blah Blah</a></li>
+            <li><a href="#">Something else here</a></li> -->
+            <!-- <li role="separator" class="divider"></li> -->
+            <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>My Resume</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar only shows after scroll for a smooth fade transition -->
+<nav class="navbar navbar-default navbarScroll navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href={{ "/index.html" | prepend: url }}>
+        <div class="img_wrap">
+          <img src={{"/assets/img/photo.jpg" | prepend: url }} alt="">
+        </div>
+      </a>
+      <a href={{ "/index.html" | prepend: url }} class="navbar-brand">
+        <h1>{{site.main_heading}}</h1>
+        <h2>{{site.kicker}}</h2>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+          {% for item in navigation_pages %}
+            {% if item.navigation_weight %}
+            <li {% if item.url ==  page.url %} class="active" {% endif %}><a href="{{ item.url }}">{{ item.nav_name }}</a></li>
+            {% endif %}
+          {% endfor %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Download <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <!-- <li><a href="#">Starter Kit</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li> -->
+            <li><a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>My Resume</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

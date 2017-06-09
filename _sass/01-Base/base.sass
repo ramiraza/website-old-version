@@ -1,0 +1,55 @@
+// ******** base colors
+$bordergray:  #ecf0f1
+$cherryred:   #ee2b5b
+$heading:     #2c3e50
+$lightgray:   #efefef
+$subtlebg:    #F3F7F8
+
+// --------base styling -----------
+$opensans: 'Open Sans', sans-serif
+$roboto-slab: 'Roboto Slab', serif
+
+body
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  display: none
+
+.navbar-fixed-top
+  border-bottom: 1px solid $lightgray
+
+.border-bottom
+  border-bottom: 4px solid $bordergray
+  padding-bottom: 40px
+
+.main_container
+  min-height: 90vh
+
+// ************** base styling
+pre
+  border: none
+  font-weight: 500
+  margin: 50px 0
+
+h1, h2, h3
+  font-family: $opensans
+  margin: 0
+  padding: 0
+  color: $heading
+
+h2
+  font-size: 1.5em
+
+p, ul
+  font-family: $roboto-slab
+  font-weight: 400
+
+a
+  color: $cherryred
+  text-decoration: none !important
+  cursor: pointer
+  transition: .5s ease-out
+  &:hover
+    color: gray
+
+.fa
+  margin: 0 5px

@@ -1,9 +1,80 @@
 ---
-layout: default
+layout: portfolio
+title: Projects
+permalink: /projects/
+nav_name: Projects
+navigation_weight: 4
 ---
-{% include navigation.html %}
-<ul>
-  {% for project in site.projects %}
-  <li><a href="{{project.url}}">{{project.title}}</a></li>
-  {% endfor %}
-</ul>
+
+<!-- including carousel to feature portfolio items  -->
+<div class="carousel">
+	{% for project in site.projects %} {% if project.featured %}
+	<div class="slide" style="background: {{project.bg}}">
+		<a href="{{project.url}}">
+			<div class="col-sm-8 text-col">
+				{% if project.label %}
+				<span class="label label-default">NEW!</span> {% endif %}
+				<h2>{{project.description}}</h2>
+				<p>{{project.title}}</p>
+			</div>
+			<div class="col-sm-4 icon">
+				<img src="{{project.thumbnail}}" alt="" class="bg_img">
+			</div>
+		</a>
+	</div>
+	{% endif %} {% endfor %}
+	<p>New items will be added soon</p>
+</div>
+
+
+<!-- including separate categories for group of items in portfolio -->
+
+<section class="container categories">
+	<h3>Branding Concepts</h3>
+	<p>Designed for small and medium sized businesses</p>
+	<div class="row">
+		{% for project in site.projects %}
+			{% if project.category == 'design' %}
+				{% if project.featured != true %}
+					<div class="col-md-3 col-sm-4">
+						<a href="{{project.url}}" alt="{{project.title}} link to project">
+							<div class="item">
+								{% if project.label %}
+									<span class="label">
+										<i class="fa fa-tag" aria-hidden="true"></i>
+										{{project.tag}}
+									</span>
+								{% endif %}
+								<img src="{{project.thumbnail}}" alt="">
+								<p class="project_title">{{project.title}}</p>
+								<p class="project_desc">{{project.description | truncate: 100 }}</p>
+								<p class="author">By {{project.author}}</p>
+							</div>
+						</a>
+					</div>
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	</div>
+</section>
+
+<section class="container categories">
+	<h3>Web Dev Concepts</h3>
+	<p>Web development and creative ideas</p>
+	<div class="row">
+		{% for project in site.projects %} {% if project.category == 'web' %} {% if project.featured != true %}
+		<div class="col-md-3 col-sm-4">
+			<a href="{{project.url}}" alt="{{project.title}} link to project">
+				<div class="item">
+					{% if project.label %}
+					<span class="label"><i class="fa fa-tag" aria-hidden="true"></i>{{project.tag}}</span> {% endif %}
+					<img src="{{project.thumbnail}}" alt="">
+					<p class="project_title">{{project.title}}</p>
+					<p class="project_desc">{{project.description | truncate: 100 }}</p>
+					<p class="author">By {{project.author}}</p>
+				</div>
+			</a>
+		</div>
+		{% endif %} {% endif %} {% endfor %}
+	</div>
+</section>

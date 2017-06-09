@@ -1,0 +1,41 @@
+<section class="row skills">
+
+  {% if page.title == 'About' %}
+    {% for skill in site.data.skills limit:6 %}
+      <div class="col-sm-6 col-md-4">
+          <div class="skill">
+            {% if skill.label %}
+            <span class="label label-success">New</span>
+            {% endif %}
+            <img src="{{skill.svg}}" alt="">
+            <h3>{{skill.name}}</h3>
+            <p class="skill-desc">{{skill.description}}</p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.level}};">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+        </div>
+      </div>
+    {% endfor %}
+    {% else %}
+      {% for skill in site.data.skills %}
+      <div class="col-sm-6 col-md-4">
+          <div class="skill">
+            {% if skill.label %}
+            <span class="label label-success">In Progress..</span>
+            {% endif %}
+            <img src="{{skill.svg}}" alt="">
+            <h3>{{skill.name}}</h3>
+            <p class="skill-desc">{{skill.description}}</p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.level}};">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  {% endif %}
+<section>

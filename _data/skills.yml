@@ -1,0 +1,36 @@
+
+- name: HTML&CSS
+  label: false
+  description: Hyper Text Markup Language &amp; Cascading Stylesheets
+  svg: /assets/devicons/html_css.svg
+  level: 75%
+
+- name: Javascript
+  label: false
+  description: An object-oriented programming language
+  svg: /assets/devicons/js.svg
+  level: 80%
+
+- name: Git
+  label: false
+  description: A version control system widely used with Github
+  svg: /assets/devicons/git.svg
+  level: 65%
+
+- name: Node
+  label: true
+  description: A Javascript runtime powered by Chrome V8 engine.
+  svg: /assets/devicons/node.svg
+  level: 30%
+
+- name: Bootstrap
+  label: false
+  description: A popular HTML, CSS and JS framework
+  svg: /assets/devicons/bootstrap.svg
+  level: 40%
+
+- name: Jekyll
+  label: false
+  description: A Ruby based static site geneator
+  svg: /assets/devicons/jekyll.svg
+  level: 80%
