@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "description": "Jekyll and bootstrap driven portfolio website to display my projects and blog about my latest discoveries",
+  "main": "index.js",
+  "authors": [
+    "Ali Raza"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "portfolio",
+    "jekyll"
+  ],
+  "homepage": "https://github.com/unsyllable/portfolio",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

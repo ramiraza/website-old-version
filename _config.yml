@@ -1,14 +1,23 @@
-title: Ali Raza - Web Dev. Project
 
-incremental: true
-profile: true
-port: 8080
-host: 0.0.0.0
-permalink: pretty
+## global vars
+title: Ali Raza - Web Developer // Designer
+main_heading: Ali Raza
+kicker: Web Developer // Designer
 
+## build settings specific to cloud 9 platform
+## terminal cmd: jerkyll serve -w
+baseurl: ''
+exclude: ['package.json', '.gitignore', 'node_modules', 'gulpfile.js']
+port: 8080 ## c9 port
+host: 0.0.0.0 ## c9 host
 sass:
-  style: compressed
-  
+    style: compressed
+
+## conversion
+markdown: kramdown
+highlighter: rouge
+
+
 collections:
   projects:
     output: true

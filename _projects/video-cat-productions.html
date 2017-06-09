@@ -1,0 +1,33 @@
+---
+layout: portfolio
+featured: false
+label: true
+tag: Design
+title: Video Cat Productions
+description: Branding and web designing project for a reno local video and audio production house. The project was awarded to create a distinct look that represends the name and describe what it does.
+thumbnail: /assets/portfolio/video.svg
+hero: /assets/img/videocat_banner.png
+bg: '#394651'
+author: Ali
+category: design
+target: http://www.videocatproductions.com
+---
+
+<div class=" container portfolio_page">
+	<div class="col-md-8 col-md-offset-2 project">
+		<img src="{{ page.hero | prepend: url }}" alt="">
+
+		<div class="content">
+			<h1 class="project_title">{{page.title}} &dash;</h1>
+			<p>VCP is a production house located in Reno Nevada that specializes in event planning and audio production services. Client provided a creative brief identifying a need for a branding with modern and innovative look yet something with a fresh and delicious feel, something simple and timeless and memorable.</p>
+			<p>We knew we had to come up with something unique and versatile. A logo that reflects the brand but also point to videography. After we showed our first mock to client, we were awarded with the project and we end up designing a logo and a website</p>
+
+			{% if page.target %}
+				<p>visit <a href="{{page.target}}" target="_blank">{{page.target | remove: "http://www." | remove: ".com" }}</a></p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="col-md-6 col-md-offset-3">
+		{% include social.html %}
+	</div>
+</div>
