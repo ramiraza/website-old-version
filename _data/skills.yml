@@ -11,17 +11,17 @@
   svg: /assets/devicons/js.svg
   level: 80%
 
+- name: Node
+  label: true
+  description: A Javascript runtime powered by Chrome V8 engine.
+  svg: /assets/devicons/node.svg
+  level: 40%
+
 - name: Git
   label: false
   description: A version control system widely used with Github
   svg: /assets/devicons/git.svg
   level: 65%
-
-- name: Node
-  label: true
-  description: A Javascript runtime powered by Chrome V8 engine.
-  svg: /assets/devicons/node.svg
-  level: 30%
 
 - name: Bootstrap
   label: false

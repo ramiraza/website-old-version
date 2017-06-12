@@ -1,0 +1,48 @@
+---
+title: dynamic copyright year
+permalink: /:categories/:title
+layout: post
+main_img: /assets/posts/title.png
+author: Ali Raza
+excerpt: "This post describes a short and easy way to include a dynamic copyright year inside the footer of a page. Infact I used this same trick on this website. Afterall who likes messing with the static content... right?... right? or is it just me?"
+---
+
+
+<div class="post">
+	<span class="post_img">
+		<img src="/assets/posts/title.png">
+	</span>
+
+	<h1>{{page.title}}</h1>
+
+	<p>What is a dynamic copyright year? while it is pretty self explainatory,  but I'll go an extra mile and explain it nonetheless. It is that year we have in our websites footer. You know that nobody cares about. Yea, that!</p>
+	<p>This post describes a short and easy way to include a dynamic copyright year inside the footer of a page. Infact I used this same trick on this website. Afterall who likes messing with the static content... right?... right? or is it just me?</p>
+
+	<ul>
+		<li>Start by adding a target element inside the footer. In our case we'll be targetting <code>#year</code> id</li>
+		<li>Create a Javascript <code>Date()</code> object and assign it to a variable <code>today</code></li>
+		<li>Then using jquery <code>$('#year')</code> method target the element inside footer</li>
+		<li>Now manupilcate the inner HTML using <code>.html</code> method and giving it a value of today variable we created earlier </li>
+	</ul>
+
+{% highlight html %}
+<footer>
+ <p>&copy; Copyrights &mdash;
+   <span id="year"></span>
+ </p>
+</footer>
+{% endhighlight %}
+
+{% highlight javascript %}
+(function() {
+  $(document).ready(function() {
+    var today = new Date();
+    $('#year').html(today.getFullYear());
+  });
+})();
+{% endhighlight %}
+
+<p>There you have it, in few easy steps. Your copyright year is now fully dynamic and it will automatically update itself everytime the current year changes. Very simple and easy.</p>
+
+{% include social.html %}
+</div>
