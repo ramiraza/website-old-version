@@ -1,5 +1,7 @@
+
 .main
 	min-height: 120vh
+	background: $subtlebg
 
 .jumbotron
 	border-bottom: 2px solid #dfdfdf
@@ -14,34 +16,42 @@
 	margin: 0
 
 	li
-		margin-bottom: 30px
-		// background: #ecf0f1
-		padding: 15px
-		margin-left: 0
+		padding: 20px
+		margin: 20px 0
 		border-radius: 5px
+		background: #fff
+		transition: .2s ease-in-out
+		color: $heading
+		&:hover
+			box-shadow: 0 1px 2px 0 #dfdfdf
+		h2
+			margin-bottom: 8px
+			text-transform: capitalize
 
-		h2 a
-			color: $heading
-			font-weight: 600
-		span
-			font-size: .8em
-			color: gray
-			margin-top: 10px
-			display: inline-block
-		
+			+ span
+				color: gray
+				display: inline-block
+				margin-bottom: 5px
 
-.blog_page
-	margin-top: 50px
-	p
-		font-size: 1.3em
 .post_img
-	height: 200px
-	width: 100%
-	overflow: hidden
-	margin: 10px 0
-	border-radius: 4px
-		
 	img
 		width: 100%
-	
-	
+		margin-bottom: 15px
+		background: #fff
+
+
+
+.post
+	// margin-bottom: 150px
+	h1
+		margin: 20px 0px
+		font-size: 2em
+		text-transform: capitalize
+	p, ul
+		font-size: 1.2em
+		margin: 20px 0px
+		text-align: justify
+	ul li
+		padding: 5px
+	.social
+		margin-top: 100px

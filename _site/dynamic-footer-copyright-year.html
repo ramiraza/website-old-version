@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="descriptipn" content="">
-    <title> About </title>
+    <title> dynamic copyright year </title>
     <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
@@ -57,7 +57,7 @@
             
           
             
-            <li  class="active" ><a href="/about/">About</a></li>
+            <li ><a href="/about/">About</a></li>
             
           
             
@@ -111,7 +111,7 @@
             
           
             
-            <li  class="active" ><a href="/about/">About</a></li>
+            <li ><a href="/about/">About</a></li>
             
           
             
@@ -140,117 +140,57 @@
 
   <div class="main">
       <div class="container">
-<div class="col-md-8 col-md-offset-2 col-xs-12 main_container">
-  <div class="hero_holder">
-    <img src="" alt="">
+	<div class="col-md-8 col-md-offset-2 col-xs-12 main_container">
+		<div class="post">
+	<span class="post_img">
+		<img src="/assets/posts/title.png">
+	</span>
+
+	<h1>dynamic copyright year</h1>
+
+	<p>What is a dynamic copyright year? while it is pretty self explainatory,  but I'll go an extra mile and explain it nonetheless. It is that year we have in our websites footer. You know that nobody cares about. Yea, that!</p>
+	<p>This post describes a short and easy way to include a dynamic copyright year inside the footer of a page. Infact I used this same trick on this website. Afterall who likes messing with the static content... right?... right? or is it just me?</p>
+
+	<ul>
+		<li>Start by adding a target element inside the footer. In our case we'll be targetting <code>#year</code> id</li>
+		<li>Create a Javascript <code>Date()</code> object and assign it to a variable <code>today</code></li>
+		<li>Then using jquery <code>$('#year')</code> method target the element inside footer</li>
+		<li>Now manupilcate the inner HTML using <code>.html</code> method and giving it a value of today variable we created earlier </li>
+	</ul>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer&gt;</span>
+ <span class="nt">&lt;p&gt;</span><span class="ni">&amp;copy;</span> Copyrights <span class="ni">&amp;mdash;</span>
+   <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"year"</span><span class="nt">&gt;&lt;/span&gt;</span>
+ <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/footer&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">today</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">'#year'</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">today</span><span class="p">.</span><span class="nx">getFullYear</span><span class="p">());</span>
+  <span class="p">});</span>
+<span class="p">})();</span></code></pre></figure>
+
+<p>There you have it, in few easy steps. Your copyright year is now fully dynamic and it will automatically update itself everytime the current year changes. Very simple and easy.</p>
+
+<div class="row social">
+  <div class="col-sm-3 col-xs-6">
+    <a href="mailto:ali@unsyllable.com"><i class="fa fa-envelope-o"></i>Email</a>
   </div>
-  <p class="caption" role="caption">Reno, NV - photo taken by <a href="https://www.flickr.com/photos/beaurogers/" target="_blank">Beau Rogers</a></p>
-
-  <div class="about border-bottom">
-    <p>Hey I'm Ali, a software developer from Reno Nevada. I use web technologies to build awesome apps and to contribute back to the opensource world, I'm a proud supporter of the my local dev community and can often be found in local <a href="https://www.meetup.com/RenoJS/events/239883781/" target="_blank">meetups</a>.</p>
-    <ul>What I've been up to:
-      <li>working full-time as a Risk/Fraud Analyst at <a href="https://blackhawknetwork.com/"target="_blank">Blackhawk Network</a>.</li>
-      <li>building an opensource web app to help identify politically exposed personel and US sanctioned individuals to prevent <abbr title="Office of Foreign Asset Control" class="initialism">OFAC</abbr> true matches.</li>
-      <li>learning new web technologies at
-        <a href="https://www.teamtreehouse.com" target="_blank">teamtreehouse.com</a>.
-      </li>
-      <li>Volunteering and helping local non-profits with their web projects.</li>
+  <div class="col-sm-3 col-xs-6">
+    <a href="https://www.linkedin.com/in/unsyllable/" target="_blank"><i class="fa fa-linkedin-square"></i>Linkedin</a>
   </div>
-
-  <section class="row skills">
-
-  
-    
-      <div class="col-sm-6 col-md-4">
-          <div class="skill">
-            
-            <img src="/assets/devicons/html_css.svg" alt="">
-            <h3>HTML&CSS</h3>
-            <p class="skill-desc">Hyper Text Markup Language &amp; Cascading Stylesheets</p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                <span class="sr-only"></span>
-              </div>
-            </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6 col-md-4">
-          <div class="skill">
-            
-            <img src="/assets/devicons/js.svg" alt="">
-            <h3>Javascript</h3>
-            <p class="skill-desc">An object-oriented programming language</p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                <span class="sr-only"></span>
-              </div>
-            </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6 col-md-4">
-          <div class="skill">
-            
-            <span class="label label-success">New</span>
-            
-            <img src="/assets/devicons/node.svg" alt="">
-            <h3>Node</h3>
-            <p class="skill-desc">A Javascript runtime powered by Chrome V8 engine.</p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                <span class="sr-only"></span>
-              </div>
-            </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6 col-md-4">
-          <div class="skill">
-            
-            <img src="/assets/devicons/git.svg" alt="">
-            <h3>Git</h3>
-            <p class="skill-desc">A version control system widely used with Github</p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-                <span class="sr-only"></span>
-              </div>
-            </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6 col-md-4">
-          <div class="skill">
-            
-            <img src="/assets/devicons/bootstrap.svg" alt="">
-            <h3>Bootstrap</h3>
-            <p class="skill-desc">A popular HTML, CSS and JS framework</p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-                <span class="sr-only"></span>
-              </div>
-            </div>
-        </div>
-      </div>
-    
-      <div class="col-sm-6 col-md-4">
-          <div class="skill">
-            
-            <img src="/assets/devicons/jekyll.svg" alt="">
-            <h3>Jekyll</h3>
-            <p class="skill-desc">A Ruby based static site geneator</p>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-                <span class="sr-only"></span>
-              </div>
-            </div>
-        </div>
-      </div>
-    
-    
-<section>
+  <div class="col-sm-3 col-xs-6">
+    <a href="https://www.github.com/unsyllable" target="_blank"><i class="fa fa-github-alt"></i>GitHub</a>
+  </div>
+  <div class="col-sm-3 col-xs-6">
+    <a href="https://www.codepen.io/unsyllable" target="_blank"><i class="fa fa-codepen"></i>Codepen</a>
+  </div>
+</div>
 
 </div>
+
+	</div>
 </div>
 
   </div>
